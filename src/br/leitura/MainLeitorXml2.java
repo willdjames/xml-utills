@@ -29,7 +29,7 @@ public class MainLeitorXml2 {
 //		Recebe o arquivo source
 		reader.parse(input);
 		
-		
+		System.out.println(handler.arrayList);
 		
 		
 	}

@@ -10,6 +10,9 @@ public class Produto {
 		this.preco = preco;
 	}
 	
+	public Produto() {
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -18,8 +21,18 @@ public class Produto {
 		return preco;
 	}
 	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+
 	@Override
 	public String toString() {
-		return this.nome+ "| "+ this.preco;
+		return "{"+ this.nome+ ", \n"+ this.preco+ "}";
 	}
+	
+	
 }
