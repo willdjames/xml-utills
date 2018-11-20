@@ -9,6 +9,8 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
+import br.handler.ProdutoHandler;
+
 public class MainLeitorXml2 {
 	
 	public static void main(String[] args) throws SAXException, IOException {
@@ -21,7 +23,7 @@ public class MainLeitorXml2 {
 		XMLReader reader = XMLReaderFactory.createXMLReader();
 
 //		Instancia a logica do leitor
-		LeitorXml handler = new LeitorXml();
+		ProdutoHandler handler = new ProdutoHandler();
 
 //		Le o conteudo
 		reader.setContentHandler(handler);

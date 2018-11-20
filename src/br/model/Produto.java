@@ -31,7 +31,7 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return "{"+ this.nome+ ", \n"+ this.preco+ "}";
+		return "{"+ this.nome+ ", "+ this.preco+ "}";
 	}
 	
 	

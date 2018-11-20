@@ -1,4 +1,4 @@
-package br.leitura;
+package br.handler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import br.model.Produto;
 
-public class LeitorXml extends DefaultHandler {
+public class ProdutoHandler extends DefaultHandler {
 	
 	private Produto produto;
 	private StringBuilder builder;
