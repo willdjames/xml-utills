@@ -15,7 +15,7 @@ import org.xml.sax.SAXException;
 
 import br.model.Produto;
 
-public class MainLeitorXml3 {
+public class MainLeitorXmlStax {
 
 	public static void main(String[] args) throws FileNotFoundException, SAXException, XMLStreamException {
 

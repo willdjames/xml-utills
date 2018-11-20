@@ -11,7 +11,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 import br.handler.ProdutoHandler;
 
-public class MainLeitorXml2 {
+public class MainLeitorXmlSax {
 	
 	public static void main(String[] args) throws SAXException, IOException {
 		

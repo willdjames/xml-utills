@@ -13,7 +13,7 @@ import org.xml.sax.SAXException;
 
 import br.model.Produto;
 
-public class MainLeitorXml {
+public class MainLeitorXmlDOM {
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 		
