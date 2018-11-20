@@ -5,6 +5,11 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -15,7 +20,7 @@ import br.model.Produto;
 
 public class MainLeitorXmlDOM {
 
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
 		
 //		Instancia a fabrica de criar documento na memoria
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -33,8 +38,22 @@ public class MainLeitorXmlDOM {
 //		Coloca o documento da memoria e referencia para uma variavel
 		Document document = builder.parse("src/venda.xml");
 		
+//		Cria uma expressao para compilar para XPath
+		String expression = "/venda/produtos/produto";
+		
+//		Instancia a fabrica XPath
+		XPath xPath = XPathFactory.newInstance().newXPath();
+		
+//		Compila a expressao acima
+		XPathExpression xPathExpression = xPath.compile(expression);
+		
+//		Pesquisa na arvore DOM a expressao e retorna no caso uma lista de nos
+		NodeList nodeList = (NodeList) xPathExpression.evaluate(document, XPathConstants.NODESET);
+		
+//		OU USA A SOLUCAO MAIS SIMPLES ABAIXO
+		
 //		Captura uma lista de tags com a refencia passada
-		NodeList nodeList = document.getElementsByTagName("produto");
+//		NodeList nodeList = document.getElementsByTagName("produto");
 		
 //		Captura um atributo de uma tag
 		String moeda = document.getDocumentElement().getAttribute("moeda");
