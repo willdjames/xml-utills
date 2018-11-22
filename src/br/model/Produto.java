@@ -1,8 +1,15 @@
 package br.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
+@XmlAccessorType( XmlAccessType.FIELD)
 public class Produto {
 
 	private String nome;
+	
+	@XmlElement(name="valor")
 	private Double preco;
 
 	public Produto(String nome, Double preco) {
